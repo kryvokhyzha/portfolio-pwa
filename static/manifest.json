@@ -1,0 +1,22 @@
+{
+    "short_name": "Kryvokhyzha",
+    "name": "Roman Kryvokhyzha",
+    "icons": [
+      {
+        "src": "/favicon.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      },
+      {
+        "src": "/favicon_2.png",
+        "type": "image/png",
+        "sizes": "256x256"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#552277",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#009933"
+  }
+  
