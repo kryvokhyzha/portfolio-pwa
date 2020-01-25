@@ -4,7 +4,10 @@
   "description": "Progressive web application with my CV",
   "main": "index.js",
   "scripts": {
-    "test": "echo tests"
+    "start": "node index.js",
+    "lint": "eslint .",
+    "test": "echo tests",
+    "deploy": "echo deploy"
   },
   "repository": {
     "type": "git",
