@@ -1,0 +1,28 @@
+{
+  "name": "portfolio-pwa",
+  "version": "1.0.0",
+  "description": "Progressive web application with my CV",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kryvokhyzha/portfolio-pwa.git"
+  },
+  "keywords": [
+    "nodejs",
+    "js",
+    "pwa",
+    "cv"
+  ],
+  "author": "Roman Kryvokhyzha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kryvokhyzha/portfolio-pwa/issues"
+  },
+  "homepage": "https://github.com/kryvokhyzha/portfolio-pwa#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
