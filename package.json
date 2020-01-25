@@ -4,7 +4,7 @@
   "description": "Progressive web application with my CV",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node .",
     "lint": "eslint .",
     "test": "echo tests",
     "deploy": "echo deploy"

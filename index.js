@@ -24,6 +24,9 @@ const serveFile = name => {
     return fs.createReadStream(filePath);
 };
 
+const HOST = process.env.HOST || '0.0.0.0';
+const PORT = process.env.PORT || 8000;
+
 const api = new Map();
 
 const receiveArgs = async req => new Promise(resolve => {
@@ -98,4 +101,4 @@ http.createServer(async (req, res) => {
         const stream = serveFile(url);
         if (stream) stream.pipe(res);
     }
-}).listen(8000, '0.0.0.0');
+}).listen(PORT, HOST);
