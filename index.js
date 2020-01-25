@@ -98,4 +98,4 @@ http.createServer(async (req, res) => {
         const stream = serveFile(url);
         if (stream) stream.pipe(res);
     }
-}).listen(8000);
+}).listen(8000, '0.0.0.0');
