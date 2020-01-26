@@ -5,10 +5,12 @@
     cursor: default;
     -moz-user-select: inherit;
   }
+  
   a, a * {
     cursor: pointer;
     color: #ff5050
   }
+
   a:link {
     color: #ff5050;
     text-decoration: none;
