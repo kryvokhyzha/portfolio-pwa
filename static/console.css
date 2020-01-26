@@ -7,6 +7,25 @@
   }
   a, a * {
     cursor: pointer;
+    color: #ff5050
+  }
+  a:link {
+    color: #ff5050;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: #ff5050;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
+    color: #cc00cc;
   }
   html, body {
     padding: 0;
