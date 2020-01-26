@@ -103,7 +103,7 @@
     overflow-x: hidden;
     overflow-y: scroll;
     position: absolute;
-    left: 0;
+    left: 5%;
     right: 0;
     top: 0;
     bottom: 0;
@@ -140,12 +140,12 @@
     left: 0;
   }
   #controlKeyboard .key {
-    font-size: 1.4em;
+    font-size: 1.7em;
     background: #262626;
     display: inline-block;
     text-align: center;
     width: 10%;
-    height: 25px;
+    height: 45px;
   }
   .caps {
     text-transform: uppercase;
