@@ -101,12 +101,12 @@ const pad = (padChar, length) => new Array(length + 1).join(padChar);
 
 const isMobile = () => (
     navigator.userAgent.match(/Android/i) ||
-  navigator.userAgent.match(/webOS/i) ||
-  navigator.userAgent.match(/iPhone/i) ||
-  navigator.userAgent.match(/iPad/i) ||
-  navigator.userAgent.match(/iPod/i) ||
-  navigator.userAgent.match(/BlackBerry/i) ||
-  navigator.userAgent.match(/Windows Phone/i)
+    navigator.userAgent.match(/webOS/i) ||
+    navigator.userAgent.match(/iPhone/i) ||
+    navigator.userAgent.match(/iPad/i) ||
+    navigator.userAgent.match(/iPod/i) ||
+    navigator.userAgent.match(/BlackBerry/i) ||
+    navigator.userAgent.match(/Windows Phone/i)
 );
 
 let viewportHeight, viewableRatio;
@@ -296,13 +296,6 @@ document.onkeypress = event => {
     }
 };
 
-const commandLoop = () => {
-    input('command', '>>> ', (err, line) => {
-        exec(line);
-        commandLoop();
-    });
-};
-
 const help = [
     '', 'Commands: about, contacts'
 ];
@@ -315,7 +308,28 @@ const exec = async line => {
     commandLoop();
 };
 
+
+function commandLoop() {
+    input('command', '>>> ', (err, line) => {
+        exec(line);
+        commandLoop();
+    });
+}
+
 window.addEventListener('load', () => {
+    const commonImg = document.getElementById('commonImg');
+    const body = document.getElementsByTagName('body')[0];
+
+    if (isMobile()) {
+        console.log('Is mobile');
+        body.style.fontSize = '11pt';
+        commonImg.style.width = '100%';
+    } else {
+        console.log('Is not mobile');
+        body.style.fontSize = '13pt';
+        commonImg.style.height = '256px';
+    }
+
     panelScroll = document.getElementById('panelScroll');
     controlInput = document.getElementById('controlInput');
     controlKeyboard = document.getElementById('controlKeyboard');
@@ -324,6 +338,9 @@ window.addEventListener('load', () => {
     initKeyboard();
     initScroll();
     const path = window.location.pathname.substring(1);
+
+    // document.getElementsByTagName("body")[0].style
+
     print([
         'Hi👋',
         'This is progressive web application with my CV.',
