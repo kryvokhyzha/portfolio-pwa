@@ -101,6 +101,13 @@ http.createServer(async (req, res) => {
             console.dir({ err });
             httpError(res, 500, 'Server error');
         }
+    } else if (first === 'getAllApi') {
+        try {
+            res.end(JSON.stringify(Array.from(api.keys())));
+        } catch (err) {
+            console.dir({ err });
+            httpError(res, 500, 'Server error');
+        }
     } else {
         const fileExt = path.extname(url).substring(1);
         res.writeHead(200, { 'Content-Type': MIME_TYPES[fileExt] });

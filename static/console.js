@@ -70,6 +70,22 @@ const buildAPI = methods => {
     return api;
 };
 
+const getAllApi = () => new Promise((resolve, reject) => {
+    const url = '/getAllApi';
+    console.log(url);
+    fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+    }).then(res => {
+        const { status } = res;
+        if (status !== 200) {
+            reject(new Error(`Status Code: ${status}`));
+            return;
+        }
+        resolve(res.json());
+    });
+});
+
 // Console Emulation
 
 const ALPHA_UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -95,7 +111,16 @@ for (const keyName in KEY_CODE) KEY_NAME[KEY_CODE[keyName]] = keyName;
 let controlKeyboard, panelScroll;
 let controlInput, controlBrowse, controlScroll;
 
-const api = buildAPI(['about', 'contacts']);
+let api;
+let help;
+getAllApi().then(res => {
+    api = buildAPI(res);
+    help = [
+        '', `Commands: ${res.join(', ')}`
+    ];
+});
+
+//const api = buildAPI(['about', 'contacts']);
 
 const pad = (padChar, length) => new Array(length + 1).join(padChar);
 
@@ -295,10 +320,6 @@ document.onkeypress = event => {
         }
     }
 };
-
-const help = [
-    '', 'Commands: about, contacts'
-];
 
 const exec = async line => {
     const args = line.split(' ');
