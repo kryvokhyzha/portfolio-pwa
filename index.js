@@ -42,7 +42,10 @@ const receiveArgs = async req => new Promise(resolve => {
 
 const cacheFile = name => {
     const filePath = API_PATH + name;
+
+    if (!filePath.endsWith('.js')) return;
     const key = path.basename(filePath, '.js');
+
     try {
         const libPath = require.resolve(filePath);
         delete require.cache[libPath];
