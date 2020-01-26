@@ -78,6 +78,12 @@ const httpError = (res, status, message) => {
     res.end(`"${message}"`);
 };
 
+function wrappAll(data) {
+    return Promise.all(data.map(async element =>
+        `<p style="margin-left: 2%">${element}</p>`
+    ));
+}
+
 http.createServer(async (req, res) => {
     const url = req.url === '/' ? '/index.html' : req.url;
     const [first, second] = url.substring(1).split('/');
@@ -90,7 +96,14 @@ http.createServer(async (req, res) => {
                 httpError(res, 500, 'Server error');
                 return;
             }
-            res.end(JSON.stringify(result));
+            res.end(JSON.stringify(await wrappAll(result)));
+        } catch (err) {
+            console.dir({ err });
+            httpError(res, 500, 'Server error');
+        }
+    } else if (first === 'getAllApi') {
+        try {
+            res.end(JSON.stringify(Array.from(api.keys())));
         } catch (err) {
             console.dir({ err });
             httpError(res, 500, 'Server error');
