@@ -116,8 +116,10 @@ let help;
 getAllApi().then(res => {
     api = buildAPI(res);
     help = [
-        '', `Commands: ${res.join(', ')}`
+        '', `Commands: ${res.join(', ')}, clear, help`, ''
     ];
+    api.clear = clear;
+    api.help = () => `<p style="margin-left: 2%">${help[1]}</p>`;
 });
 
 //const api = buildAPI(['about', 'contacts']);
@@ -251,6 +253,15 @@ const inputKeyboardEvents = {
         let value = controlInput.inputValue;
         value += char;
         inputSetValue(value);
+    },
+    TAB() {
+        const value = controlInput.inputValue;
+        const compleate = [];
+        for (const i of Object.keys(api)) {
+            if (i.startsWith(value)) compleate.push(i);
+        }
+
+        if (compleate.length === 1) inputSetValue(compleate[0]);
     }
 };
 
@@ -335,6 +346,15 @@ function commandLoop() {
         exec(line);
         commandLoop();
     });
+}
+
+function clear() {
+    const elements = controlBrowse.children;
+    let element;
+    for (let i = elements.length - 2; i > 5; i--) {
+        element = elements[i];
+        controlBrowse.removeChild(element);
+    }
 }
 
 window.addEventListener('load', () => {
