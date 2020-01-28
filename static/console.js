@@ -111,6 +111,8 @@ for (const keyName in KEY_CODE) KEY_NAME[KEY_CODE[keyName]] = keyName;
 let controlKeyboard, panelScroll;
 let controlInput, controlBrowse, controlScroll;
 
+let history = ['help'];
+let iterator = 0;
 let api;
 let help;
 getAllApi().then(res => {
@@ -231,6 +233,7 @@ const inputKeyboardEvents = {
     ENTER() {
         const result = controlInput.inputValue;
         let value = result;
+        iterator = history.length - 1;
         if (controlInput.inputType === 'masked') {
             value = pad('*', value.length);
         }
@@ -262,6 +265,16 @@ const inputKeyboardEvents = {
         }
 
         if (compleate.length === 1) inputSetValue(compleate[0]);
+    },
+    UP() {
+        console.log(iterator);
+        if (history.length - 1 > iterator) iterator += 1;
+        inputSetValue(history[iterator]);
+    },
+    DN() {
+        console.log(iterator);
+        if (iterator - 1 >= 0) iterator -= 1;
+        inputSetValue(history[iterator]);
     }
 };
 
@@ -335,6 +348,7 @@ document.onkeypress = event => {
 const exec = async line => {
     const args = line.split(' ');
     const cmd = args.shift();
+    history.push(cmd);
     const data = await api[cmd](args);
     print(data);
     commandLoop();
@@ -355,6 +369,8 @@ function clear() {
         element = elements[i];
         controlBrowse.removeChild(element);
     }
+    history = ['help'];
+    iterator = 0;
 }
 
 window.addEventListener('load', () => {
@@ -379,8 +395,6 @@ window.addEventListener('load', () => {
     initKeyboard();
     initScroll();
     const path = window.location.pathname.substring(1);
-
-    // document.getElementsByTagName("body")[0].style
 
     print([
         'Hi👋',
