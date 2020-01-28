@@ -24,7 +24,7 @@ const serveFile = name => {
     return fs.createReadStream(filePath);
 };
 
-const HOST = process.env.HOST || '0.0.0.0';
+const HOSTNAME = process.env.HOSTNAME || '0.0.0.0';
 const PORT = process.env.PORT || 8000;
 
 const api = new Map();
@@ -87,7 +87,7 @@ function wrappAll(data) {
     ));
 }
 
-http.createServer(async (req, res) => {
+const handler = async (req, res) => {
     const url = req.url === '/' ? '/index.html' : req.url;
     const [first, second] = url.substring(1).split('/');
     if (first === 'api') {
@@ -117,4 +117,16 @@ http.createServer(async (req, res) => {
         const stream = serveFile(url);
         if (stream) stream.pipe(res);
     }
-}).listen(PORT, HOST);
+};
+
+const server = http.createServer(handler);
+
+server.listen(PORT, HOSTNAME, () => console.log(`Server running at http://${HOSTNAME}:${PORT}/`));
+
+server.on('error', err => {
+    if (err.code === 'EACCES') {
+        console.log(`No access to port: ${PORT}`);
+    } else {
+        console.log(err);
+    }
+});
