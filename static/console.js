@@ -373,7 +373,7 @@ function clear() {
     iterator = 0;
 }
 
-window.addEventListener('load', () => {
+function loadHandler() {
     const commonImg = document.getElementById('commonImg');
     const body = document.getElementsByTagName('body')[0];
 
@@ -394,18 +394,13 @@ window.addEventListener('load', () => {
     controlScroll = document.getElementById('controlScroll');
     initKeyboard();
     initScroll();
-    const path = window.location.pathname.substring(1);
 
     print([
         'Hi👋',
         'This is progressive web application with my CV.',
         'Enter command to familiar with my cv 👇',
     ].concat(help));
-    if (path) {
-        setTimeout(() => {
-            exec('contacts ' + path);
-            window.history.replaceState(null, '', '/');
-        }, TIME_LINE * 3);
-    }
     commandLoop();
-});
+}
+
+window.addEventListener('load', loadHandler);
