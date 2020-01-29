@@ -23,6 +23,7 @@ const registerServiceWorker = () => {
                         if (navigator.serviceWorker.controller) {
                             // new update available
                             newWorker.postMessage({ action: 'skipWaiting' });
+                            window.location.reload();
                         }
                         // No update available
                         break;
@@ -126,6 +127,9 @@ for (const keyName in KEY_CODE) KEY_NAME[KEY_CODE[keyName]] = keyName;
 
 let controlKeyboard, panelScroll;
 let controlInput, controlBrowse, controlScroll;
+
+console.log('okkkk');
+
 
 let history = ['help'];
 let iterator = 0;

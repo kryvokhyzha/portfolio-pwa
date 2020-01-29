@@ -11,7 +11,7 @@ const files = [
     '/Roman.png'
 ];
 
-const cacheName = 'v1.4.4.8';
+const cacheName = 'v1.4.5.4';
 
 self.addEventListener('install', event => event.waitUntil(
     caches.open(cacheName).then(cache => cache.addAll(files))
@@ -22,6 +22,14 @@ self.addEventListener('fetch', event => {
         if (response !== undefined) return response;
         return fetch(event.request);
     }));
+});
+
+self.addEventListener('activate', event => {
+    event.waitUntil(
+        caches.keys().then(cacheNames => Promise.all(
+            cacheNames.filter(name => cacheName !== name).map(name => caches.delete(name))
+        ))
+    );
 });
 
 self.addEventListener('message', event => {
