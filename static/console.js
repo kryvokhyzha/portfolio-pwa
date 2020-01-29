@@ -2,12 +2,6 @@
 
 console.log('JavaScript has loaded');
 
-function showUpdateBar() {
-    const snackbar = document.getElementById('snackbar');
-    snackbar.className = 'show';
-}
-
-let newWorker;
 
 const registerServiceWorker = () => {
     if (!Reflect.has(navigator, 'serviceWorker')) {
@@ -16,36 +10,24 @@ const registerServiceWorker = () => {
     }
     const { serviceWorker } = navigator;
     serviceWorker.register('/worker.js').then(registration => {
-        newWorker = registration.installing;
-        document.getElementById('reload').addEventListener('click', () => {
-            newWorker.postMessage({ action: 'skipWaiting' });
-        });
-
         registration.addEventListener('updatefound', () => {
             console.log('updatefound');
             // A wild service worker has appeared in reg.installing!
-            newWorker = registration.installing;
+            const newWorker = registration.installing;
 
             newWorker.addEventListener('statechange', () => {
+                console.log('statechange');
                 // Has network.state changed?
                 switch (newWorker.state) {
                     case 'installed':
                         if (navigator.serviceWorker.controller) {
                             // new update available
-                            showUpdateBar();
+                            newWorker.postMessage({ action: 'skipWaiting' });
                         }
                         // No update available
                         break;
                 }
             });
-        });
-
-        let refreshing;
-        navigator.serviceWorker.addEventListener('controllerchange', () => {
-            console.log('controllerchange');
-            if (refreshing) return;
-            window.location.reload();
-            refreshing = true;
         });
 
         if (registration.installing) {
@@ -68,13 +50,6 @@ const registerServiceWorker = () => {
 window.addEventListener('load', () => {
     console.log('The page has loaded');
     registerServiceWorker();
-
-    let refreshing;
-    navigator.serviceWorker.addEventListener('controllerchange', () => {
-        if (refreshing) return;
-        window.location.reload();
-        refreshing = true;
-    });
 });
 
 window.addEventListener('beforeinstallprompt', event => {
