@@ -128,9 +128,6 @@ for (const keyName in KEY_CODE) KEY_NAME[KEY_CODE[keyName]] = keyName;
 let controlKeyboard, panelScroll;
 let controlInput, controlBrowse, controlScroll;
 
-console.log('okkkk');
-
-
 let history = ['help'];
 let iterator = 0;
 let api;
