@@ -130,7 +130,7 @@ let controlInput, controlBrowse, controlScroll;
 let history = ['help'];
 let iterator = 0;
 let api;
-let help;
+let help = window.localStorage['help'] ? JSON.parse(window.localStorage['help']) : undefined;
 getAllApi().then(res => {
     api = buildAPI(res);
     help = [
@@ -138,6 +138,7 @@ getAllApi().then(res => {
     ];
     api.clear = clear;
     api.help = () => `<p style="margin-left: 2%">${help[1]}</p>`;
+    window.localStorage['help'] = JSON.stringify(help);
 });
 
 //const api = buildAPI(['about', 'contacts']);
