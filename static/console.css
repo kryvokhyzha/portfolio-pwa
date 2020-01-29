@@ -174,8 +174,6 @@
   }
   #snackbar {
     visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
     background-color: #333;
     color: #fff;
     text-align: center;
