@@ -2,6 +2,9 @@
 
 console.log('JavaScript has loaded');
 
+let newWorker;
+let refreshing;
+
 const registerServiceWorker = () => {
     if (!Reflect.has(navigator, 'serviceWorker')) {
         console.log('Service workers are not supported');

@@ -11,21 +11,21 @@ const files = [
     '/Roman.png'
 ];
 
+const cacheName = 'v1.3.6.4';
+
 self.addEventListener('install', event => event.waitUntil(
-    caches.open('v1').then(cache => cache.addAll(files))
+    caches.open(cacheName).then(cache => cache.addAll(files))
 ));
 
 self.addEventListener('fetch', event => {
     event.respondWith(caches.match(event.request).then(response => {
         if (response !== undefined) return response;
-        return fetch(event.request).then(response => {
-            const responseClone = response.clone();
-            caches.open('v1').then(cache => {
-                cache.put(event.request, responseClone);
-            });
-            return response;
-        }).catch(error => {
-            throw error;
-        });
+        return fetch(event.request);
     }));
+});
+
+self.addEventListener('message', event => {
+    if (event.data.action === 'skipWaiting') {
+        self.skipWaiting();
+    }
 });
