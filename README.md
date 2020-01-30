@@ -27,6 +27,5 @@ This is progressive web application with my CV.
 1.  Go to application settings<br>![](https://github.com/kryvokhyzha/portfolio-pwa/blob/master/img/app_settings.jpeg "Application settings button")
 
 2.  Click on "uninstall"
-
 3.  Also, you can clear cache data
 4.  Success!
