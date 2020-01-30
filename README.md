@@ -29,5 +29,4 @@ This is progressive web application with my CV.
 2.  Click on "uninstall"
 
 3.  Also, you can clear cache data
-
 4.  Success!
