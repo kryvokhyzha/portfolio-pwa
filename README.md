@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/93bd65204a574eb78c8ff452b6990f56)](https://app.codacy.com/manual/kryvokhyzha/portfolio-pwa?utm_source=github.com&utm_medium=referral&utm_content=kryvokhyzha/portfolio-pwa&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/kryvokhyzha/portfolio-pwa.svg?branch=master)](https://travis-ci.org/kryvokhyzha/portfolio-pwa)
 
 # What is it?
