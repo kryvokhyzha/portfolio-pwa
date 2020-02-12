@@ -8,5 +8,6 @@ module.exports = async () => [
     '📜 Обучение на размеченных данных - <i>Course by Yandex and MIPT</i>',
     '📜 Поиск структуры в данных - <i>Course by Yandex and MIPT</i>',
     '📜 Построение выводов по данным - <i>Course by Yandex and MIPT</i>',
-    '📜 Neural network and computer vision - <i>Course by Samsung R&D</i>'
+    '📜 Neural network and computer vision - <i>Course by Samsung R&D</i>',
+    '📜 How to Win a Data Science Competition - <i>Course by High School of Economics University</i>'
 ];
