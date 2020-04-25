@@ -14,15 +14,15 @@ module.exports = async () => [
     '💡 Morph Analyzer',
     '<p style="margin-left: 4%">🔹 Language: Python3, Scala</p>',
     '<p style="margin-left: 4%">🔹 Status: in progress</p>',
-    '<p style="margin-left: 4%">🔹 This is my bachelor`s project. The main idea of this application is a<br>' +
-    'creating NLP application for Ukranian an Russian text`s' +
-    '<br>making research in this field and building infrastructure, using ZooKeeper, Kafka, Spark and so on.</p>',
+    '<p style="margin-left: 4%">🔹 This is my bachelor`s project. The main idea of this application is an<br>' +
+    'creating NLP application for Ukranian and Russian text`s' +
+    '<br>making research in this field and building infrastructure using ZooKeeper, Kafka, Spark and so on.</p>',
     '<br>',
     '💡 Gradient Descent',
     '<p style="margin-left: 4%">🔹 Language: Python3</p>',
     '<p style="margin-left: 4%">🔹 Status: in progress</p>',
     '<p style="margin-left: 4%">🔹 This is my third course work. The main idea of this application is to<br>' +
-    'implement different gradient descent methods, visualize and explain how it works, using Streamlit.</p>',
+    'implement different modifications of gradient descent, visualize and explain how it works using Streamlit.</p>',
     '<br>',
     '💡 Face Recognition',
     '<p style="margin-left: 4%">🔹 Language: Python3, JS</p>',
