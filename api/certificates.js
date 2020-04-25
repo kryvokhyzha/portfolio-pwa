@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = async () => [
+    '📜 How to Win a Data Science Competition - <i>Course by High School of Economics University</i>',
     '📜 Big Data School 4.0 - <i>Course by Kyivstart</i>',
     '📜 Machine Learning - <i>Standford course by Andrew Ng`s</i>',
     '📜 Введение в машинное обучение - <i>Course by High School of Economics University</i>',
