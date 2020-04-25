@@ -6,6 +6,24 @@ module.exports = async () => [
     '<p style="margin-left: 4%">🔹 This project I made in Samsung R&D Institute Practicum.<br>' +
     'The main idea is a build analyzer and detector for different type of noise in audio files.</p>',
     '<br>',
+    '💡 Fennec-fox-cast',
+    '<p style="margin-left: 4%">🔹 Type: Team Project</p>',
+    '<p style="margin-left: 4%">🔹 Language: JS, Node.JS</p>',
+    '<p style="margin-left: 4%">🔹 Fennec Fox is a peer-to-peer application, which allows to communicate via voice or video with your friends.</[]>',
+    '<br>',
+    '💡 Morph Analyzer',
+    '<p style="margin-left: 4%">🔹 Language: Python3, Scala</p>',
+    '<p style="margin-left: 4%">🔹 Status: in progress</p>',
+    '<p style="margin-left: 4%">🔹 This is my bachelor`s project. The main idea of this application is a<br>' +
+    'creating NLP application for Ukranian an Russian text`s' +
+    '<br>making research in this field and building infrastructure, using ZooKeeper, Kafka, Spark and so on.</p>',
+    '<br>',
+    '💡 Gradient Descent',
+    '<p style="margin-left: 4%">🔹 Language: Python3</p>',
+    '<p style="margin-left: 4%">🔹 Status: in progress</p>',
+    '<p style="margin-left: 4%">🔹 This is my third course work. The main idea of this application is to<br>' +
+    'implement different gradient descent methods, visualize and explain how it works, using Streamlit.</p>',
+    '<br>',
     '💡 Face Recognition',
     '<p style="margin-left: 4%">🔹 Language: Python3, JS</p>',
     '<p style="margin-left: 4%">🔹 This is my first course work. The main idea of this application was to<br>' +
@@ -16,10 +34,5 @@ module.exports = async () => [
     '<p style="margin-left: 4%">🔹 Language: Java, TypeScript</p>',
     '<p style="margin-left: 4%">🔹 Framework: SpringBoot, Angular</p>',
     '<p style="margin-left: 4%">🔹 This project allows to create notebooks and notes for them before previous authorization. User can send feedback<br>' +
-    'about application via email and share notebooks with other users.</p>',
-    '<br>',
-    '💡 Fennec-fox-cast',
-    '<p style="margin-left: 4%">🔹 Type: Team Project</p>',
-    '<p style="margin-left: 4%">🔹 Language: JS, Node.JS</p>',
-    '<p style="margin-left: 4%">🔹 Fennec Fox is a peer-to-peer application, which allows to communicate via voice or video with your friends.</[]>'
+    'about application via email and share notebooks with other users.</p>'
 ];
