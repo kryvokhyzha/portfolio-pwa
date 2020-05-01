@@ -11,7 +11,7 @@ const files = [
     '/Roman.png'
 ];
 
-const cacheName = 'v1.4.6.1';
+const cacheName = 'v1.4.6.2';
 
 self.addEventListener('install', event => event.waitUntil(
     caches.open(cacheName).then(cache => cache.addAll(files))

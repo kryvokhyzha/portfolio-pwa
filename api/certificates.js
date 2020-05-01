@@ -3,6 +3,7 @@
 module.exports = async () => [
     '📜 How to Win a Data Science Competition - <i>Course by High School of Economics University</i>',
     '📜 Big Data School 4.0 - <i>Course by Kyivstart</i>',
+    '📜 Spark Fundamentals I - <i>Cognitive Class</i>',
     '📜 Machine Learning - <i>Standford course by Andrew Ng`s</i>',
     '📜 Введение в машинное обучение - <i>Course by High School of Economics University</i>',
     '📜 Математика и Python для анализа данных - <i>Course by Yandex and MIPT</i>',
