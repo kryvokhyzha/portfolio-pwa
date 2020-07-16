@@ -1,0 +1,9 @@
+# Группа 1
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+# Группа 2
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-pwa.herokuapp.com/sitemap.xml
