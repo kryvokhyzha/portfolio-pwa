@@ -9,6 +9,8 @@ const API_PATH = './api/';
 
 const MIME_TYPES = {
     html: 'text/html; charset=UTF-8',
+    txt: 'text/plain; charset=UTF-8',
+    xml: 'text/xml; charset=UTF-8',
     js: 'application/javascript; charset=UTF-8',
     css: 'text/css',
     png: 'image/png',
@@ -88,7 +90,7 @@ function wrappAll(data) {
 }
 
 const handler = async (req, res) => {
-    const url = req.url === '/' ? '/index.html' : req.url;
+    const url = req.url === '/' || req.url === '/index' ? '/index.html' : req.url;
     const [first, second] = url.substring(1).split('/');
     if (first === 'api') {
         const method = api.get(second);
