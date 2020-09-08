@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = async () => [
-    '🔸 Big Data Analyst in Kyivstar.',
+    '🔸 Big Data Analyst at Kyivstar.',
     '🔸 Study at the third course of FICT in KPI on "Information System and Technologiess" specialization.',
     '🔸 I have already completed few ML and DL courses in Coursera and Stepik,',
     'watched ods.ai and Deep Learning School lectures. Also, I`m developing in Big Data,',

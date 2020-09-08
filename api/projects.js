@@ -20,7 +20,6 @@ module.exports = async () => [
     '<br>',
     '💡 Gradient Descent',
     '<p style="margin-left: 4%">🔹 Language: Python3</p>',
-    '<p style="margin-left: 4%">🔹 Status: in progress</p>',
     '<p style="margin-left: 4%">🔹 This is my third course work. The main idea of this application is to<br>' +
     'implement different modifications of gradient descent, visualize and explain how it works using Streamlit.</p>',
     '<br>',
@@ -30,7 +29,6 @@ module.exports = async () => [
     'recognize wether people are preent on a live-stream<br> video on the lecture and record information about them in Excel file.</p>',
     '<br>',
     '💡 Remark',
-    '<p style="margin-left: 4%">🔹 Type: Team Project</p>',
     '<p style="margin-left: 4%">🔹 Language: Java, TypeScript</p>',
     '<p style="margin-left: 4%">🔹 Framework: SpringBoot, Angular</p>',
     '<p style="margin-left: 4%">🔹 This project allows to create notebooks and notes for them before previous authorization. User can send feedback<br>' +
