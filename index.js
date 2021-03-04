@@ -22,7 +22,7 @@ const MIME_TYPES = {
 const serveFile = name => {
     const filePath = path.join(STATIC_PATH, name);
 
-    if (!filePath.startsWith(STATIC_PATH)) return null;
+    if (!filePath.startsWith(STATIC_PATH) || !fs.existsSync(filePath)) return null;
     return fs.createReadStream(filePath);
 };
 
@@ -115,9 +115,22 @@ const handler = async (req, res) => {
         }
     } else {
         const fileExt = path.extname(url).substring(1);
-        res.writeHead(200, { 'Content-Type': MIME_TYPES[fileExt] });
-        const stream = serveFile(url);
-        if (stream) stream.pipe(res);
+        try {
+            res.writeHead(200, { 'Content-Type': MIME_TYPES[fileExt] });
+            const stream = serveFile(url);
+            if (stream) {
+                stream.pipe(res);
+            } else {
+                throw Error('404 Not Found');
+            }
+        } catch (err) {
+            console.dir({ err });
+            const url = '/index.html';
+            const fileExt = path.extname(url).substring(1);
+            res.writeHead(200, { 'Content-Type': MIME_TYPES[fileExt] });
+            const stream = serveFile(url);
+            stream.pipe(res);
+        }
     }
 };
 

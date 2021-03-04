@@ -15,7 +15,7 @@ module.exports = async () => [
     '<p style="margin-left: 4%">🔹 Language: Python3, Scala</p>',
     '<p style="margin-left: 4%">🔹 Status: in progress</p>',
     '<p style="margin-left: 4%">🔹 This is my bachelor`s project. The main idea of this application is an<br>' +
-    'creating NLP application for Ukranian and Russian text`s' +
+    'creating NLP application for Ukrainian and Russian text`s' +
     '<br>making research in this field and building infrastructure using ZooKeeper, Kafka, Spark and so on.</p>',
     '<br>',
     '💡 Gradient Descent',
@@ -26,7 +26,7 @@ module.exports = async () => [
     '💡 Face Recognition',
     '<p style="margin-left: 4%">🔹 Language: Python3, JS</p>',
     '<p style="margin-left: 4%">🔹 This is my first course work. The main idea of this application was to<br>' +
-    'recognize wether people are preent on a live-stream<br> video on the lecture and record information about them in Excel file.</p>',
+    'recognize wether people are present on a live-stream<br> video on the lecture and record information about them in Excel file.</p>',
     '<br>',
     '💡 Remark',
     '<p style="margin-left: 4%">🔹 Language: Java, TypeScript</p>',
