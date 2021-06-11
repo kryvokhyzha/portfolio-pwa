@@ -1,6 +1,11 @@
 'use strict';
 
 module.exports = async () => [
+    '💡 bert-ner-ua',
+    '<p style="margin-left: 4%">🔹 Language: Python3</p>',
+    '<p style="margin-left: 4%">🔹 This is my bachelor`s project. The main idea of this application is an<br>' +
+    'creating NER application for ukrainian language using BERT. Also, I have researched different techniques for reducing size of neural networks.</p>' +
+    '<br>',
     '💡 Voice Quality Analyzer',
     '<p style="margin-left: 4%">🔹 Language: Python</p>',
     '<p style="margin-left: 4%">🔹 This project I made in Samsung R&D Institute Practicum.<br>' +
@@ -10,13 +15,6 @@ module.exports = async () => [
     '<p style="margin-left: 4%">🔹 Type: Team Project</p>',
     '<p style="margin-left: 4%">🔹 Language: JS, Node.JS</p>',
     '<p style="margin-left: 4%">🔹 Fennec Fox is a peer-to-peer application, which allows to communicate via voice or video with your friends.</[]>',
-    '<br>',
-    '💡 Morph Analyzer',
-    '<p style="margin-left: 4%">🔹 Language: Python3, Scala</p>',
-    '<p style="margin-left: 4%">🔹 Status: in progress</p>',
-    '<p style="margin-left: 4%">🔹 This is my bachelor`s project. The main idea of this application is an<br>' +
-    'creating NLP application for Ukrainian and Russian text`s' +
-    '<br>making research in this field and building infrastructure using ZooKeeper, Kafka, Spark and so on.</p>',
     '<br>',
     '💡 Gradient Descent',
     '<p style="margin-left: 4%">🔹 Language: Python3</p>',
