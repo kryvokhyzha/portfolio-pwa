@@ -4,7 +4,7 @@ name: Deploy
 on:
   push:
     branches:
-      - develop
+      - master
 
 jobs:
   build:
@@ -32,6 +32,11 @@ jobs:
         shell: bash
       - name: Deploy to DockerHub
         run: |
-          chmod +x .scripts/scripts/deploy_dockerhub.sh
-          .scripts/scripts/deploy_dockerhub.sh
+          chmod +x .scripts/deploy_dockerhub.sh
+          .scripts/deploy_dockerhub.sh
+        shell: bash
+      - name: Deploy to Heroku
+        run: |
+          chmod +x .scripts/deploy_heroku.sh
+          .scripts/deploy_heroku.sh
         shell: bash
