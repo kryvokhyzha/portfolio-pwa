@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         node: [ '16' ]
-    name: Node ${{ matrix.node }} sample
+    name: ${{ HEROKU_APP_NAME }} | Node ${{ matrix.node }}
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v2

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo Starting deploy to DockerHub...
 docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"
