@@ -35,4 +35,3 @@ jobs:
           chmod +x .scripts/scripts/deploy_dockerhub.sh
           .scripts/scripts/deploy_dockerhub.sh
         shell: bash
-
