@@ -14,9 +14,12 @@ jobs:
         node: [ '16' ]
     name: Node ${{ matrix.node }} sample
     steps:
+      - uses: actions/checkout@master
       - name: pwd
         run: pwd
-      - name: ls
+      - name: ls1
+        run: ls -a
+      - name: ls2
         run: cd .. && ls -a
       - uses: actions/setup-node@v2
         with:
