@@ -17,7 +17,7 @@ jobs:
       - name: pwd
         run: pwd
       - name: ls
-        run: ls -a
+        run: cd .. && ls -a
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
