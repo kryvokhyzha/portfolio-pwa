@@ -15,22 +15,16 @@ jobs:
     name: Node ${{ matrix.node }} sample
     steps:
       - uses: actions/checkout@master
-      - name: pwd
-        run: pwd
-      - name: ls1
-        run: ls -a
-      - name: ls2
-        run: cd .. && ls -a
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
           cache: 'npm'
-          cache-dependency-path: /home/runner/work/portfolio-pwa/portfolio-pwa/package-lock.json
+          cache-dependency-path: package-lock.json
       - name: Install packages
-        run: /.scripts/install_deps.sh
+        run: .scripts/install_deps.sh
       - name: Test and Lint
-        run: /.scripts/test_and_lint.sh
+        run: .scripts/test_and_lint.sh
       - name: Deploy to DockerHub
-        run: /.scripts/deploy_dockerhub.sh
+        run: .scripts/deploy_dockerhub.sh
       - name: Deploy to Heroku
-        run: /.scripts/deploy_heroku.sh
+        run: .scripts/deploy_heroku.sh
