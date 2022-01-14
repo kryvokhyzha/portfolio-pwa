@@ -195,3 +195,10 @@
     margin-left: 4%;
     margin-right: 25%;
   } 
+  .list-lamp-hyphens {
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    margin-left: 2%;
+    margin-right: 25%;
+  } 
