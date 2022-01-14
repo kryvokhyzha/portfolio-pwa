@@ -34,9 +34,16 @@ jobs:
         run: |
           chmod +x .scripts/deploy_dockerhub.sh
           .scripts/deploy_dockerhub.sh
+        env:
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
+          DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
+          DOCKER_APP_NAME: ${{ secrets.DOCKER_APP_NAME }}
         shell: bash
       - name: Deploy to Heroku
         run: |
           chmod +x .scripts/deploy_heroku.sh
           .scripts/deploy_heroku.sh
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
         shell: bash

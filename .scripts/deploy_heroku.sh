@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo Starting deploy to Heroku...
+echo Starting deploy to Heroku "$HEROKU_APP_NAME"...
 
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
