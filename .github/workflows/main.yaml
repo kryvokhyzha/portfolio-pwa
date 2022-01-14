@@ -17,12 +17,12 @@ jobs:
       - name: pwd
         run: pwd
       - name: ls
-        run: ls
+        run: ls -a
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
           cache: 'npm'
-          cache-dependency-path: subdir/package-lock.json
+          cache-dependency-path: /home/runner/work/portfolio-pwa/portfolio-pwa/package-lock.json
       - name: Install packages
         run: /.scripts/install_deps.sh
       - name: Test and Lint
