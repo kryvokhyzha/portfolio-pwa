@@ -26,5 +26,3 @@ jobs:
         run: .scripts/test_and_lint.sh
       - name: Deploy to DockerHub
         run: .scripts/deploy_dockerhub.sh
-      - name: Deploy to Heroku
-        run: .scripts/deploy_heroku.sh
