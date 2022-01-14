@@ -21,8 +21,8 @@ jobs:
           cache: 'npm'
           cache-dependency-path: package-lock.json
       - name: Install packages
-        run: .scripts/install_deps.sh
+        run: sh "bash .scripts/install_deps.sh"
       - name: Test and Lint
-        run: .scripts/test_and_lint.sh
+        run: sh "bash .scripts/test_and_lint.sh"
       - name: Deploy to DockerHub
-        run: .scripts/deploy_dockerhub.sh
+        run: sh "bash .scripts/deploy_dockerhub.sh"
