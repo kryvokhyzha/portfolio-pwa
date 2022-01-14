@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo Starting deploy...
+echo Starting deploy to Heroku...
 
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
