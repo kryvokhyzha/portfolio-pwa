@@ -188,3 +188,10 @@
     -webkit-animation: fadein 0.5s;
     animation: fadein 0.5s;
   }
+  .list-hyphens {
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    margin-left: 4%;
+    margin-right: 25%;
+  } 
