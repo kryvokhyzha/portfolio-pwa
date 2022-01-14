@@ -1,6 +1,13 @@
 'use strict';
 
 module.exports = async () => [
+    '📜 Deep Learning Creator School - <i>AI HOUSE</i>',
+    '📜 Introduction to Machine Learning in Production - <i>Coursera</i>',
+    '📜 Apache Spark Programming - <i>Databricks</i>',
+    '📜 Apache Spark Associate Developer - <i>Databricks</i>',
+    '📜 Fundamentals of the Databricks Lakehouse Platform Accreditation - <i>Databricks</i>',
+    '📜 Delta Lake Fundamentals Accreditation - <i>Databricks</i>',
+    '📜 Fundamentals of Unified Data Analytics - <i>Databricks</i>',
     '📜 Applied AI with DeepLearning - <i>IBM</i>',
     '📜 Advanced Machine Learning and Signal Processing - <i>IBM</i>',
     '📜 Scalable Machine Learning on Big Data using Apache Spark - <i>IBM</i>',
