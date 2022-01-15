@@ -12,7 +12,7 @@ module.exports = async () => [
     '📜 Advanced Machine Learning and Signal Processing - <i>IBM</i>',
     '📜 Scalable Machine Learning on Big Data using Apache Spark - <i>IBM</i>',
     '📜 How to Win a Data Science Competition - <i>High School of Economics University</i>',
-    '📜 Big Data School 4.0 - <i>Kyivstart</i>',
+    '📜 Big Data School 4.0 - <i>Kyivstar</i>',
     '📜 Signal Processing - <i>Samsung R&D</i>',
     '📜 Spark Fundamentals II - <i>Cognitive Class</i>',
     '📜 Spark Fundamentals I - <i>Cognitive Class</i>',
