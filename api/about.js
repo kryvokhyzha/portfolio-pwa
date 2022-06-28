@@ -15,6 +15,7 @@ module.exports = async () => [
     '<p class="list-hyphens">🔹 develop "silver" and "gold" data sources</p>',
     '<p class="list-lamp-hyphens">💡 Study at the fifth course of <a href="https://kau.org.ua/" target="_blank">KAU</a>, "Computer Science" specialization.</p>',
     '<p class="list-lamp-hyphens">💡 Graduated with bachelor`s degree "Information System and Technologies" specialization, FICT, KPI.</p>',
-    '<p class="list-lamp-hyphens">💡 Now, I`m developing my skills in MLOps and Data Engineering fields. It would help me to write efficient code and cover the full lifecycle of ML project. I want to apply these skills at my new job.</p>',
+    '<p class="list-lamp-hyphens">💡 Now, I`m developing my skills in MLOps and Data Engineering fields. It would help me to write efficient code and cover' +
+    ' the full lifecycle of ML project. I want to apply these skills at my new job.</p>',
     '<p class="list-lamp-hyphens">💡 Availability of Deep Learning projects or projects with a lot of different data would be a plus :)</p>'
 ];
