@@ -1,6 +1,13 @@
 'use strict';
 
 module.exports = async () => [
+    '📜 Build Better Generative Adversarial Networks (GANs) - <i>DeepLearning AI</i>',
+    '📜 Build Basic Generative Adversarial Networks (GANs) - <i>DeepLearning AI</i>',
+    '📜 Perform data science with Azure Databricks - <i>Coursera</i>',
+    '📜 Build and Operate Machine Learning Solutions with Azure - <i>Coursera</i>',
+    '📜 Course DP-203T00: Data Engineering on Microsoft Azure - <i>Microsoft</i>',
+    '📜 Optimizing Apache Spark on Databricks - <i>Databricks</i>',
+    '📜 Winner of the Hackathon Expert 2022 (Computer Vision)  - <i>Hackathon Expert</i>',
     '📜 Deep Learning Creator School - <i>AI HOUSE</i>',
     '📜 Introduction to Machine Learning in Production - <i>Coursera</i>',
     '📜 Apache Spark Programming - <i>Databricks</i>',
