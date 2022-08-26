@@ -1,6 +1,8 @@
 'use strict';
 
 module.exports = async () => [
+    '📜 Microsoft Certified: Azure Data Scientist Associate (DP-100) - <i>Microsoft AI</i>',
+    '📜 Apply Generative Adversarial Networks (GANs) - <i>DeepLearning AI</i>',
     '📜 Build Better Generative Adversarial Networks (GANs) - <i>DeepLearning AI</i>',
     '📜 Build Basic Generative Adversarial Networks (GANs) - <i>DeepLearning AI</i>',
     '📜 Perform data science with Azure Databricks - <i>Coursera</i>',
