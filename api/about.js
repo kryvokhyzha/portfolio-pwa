@@ -2,7 +2,7 @@
 
 module.exports = async () => [
     '<p class="list-lamp-hyphens">💡 Machine Learning Engineer at Kyivstar.</p>',
-    '<p class="list-hyphens">🔹 have an experience in developing ML pipelines in cloud (Azure stack) with experiments tracking</p>',
+    '<p class="list-hyphens">🔹 have an experience in developing ML pipelines in cloud (Azure stack)</p>',
     '<p class="list-hyphens">🔹 develop traffic forecasting model using ML algorithms and Graph Neural Networks</p>',
     '<p class="list-hyphens">🔹 build antifraud and scoring models using ML-algorithms</p>',
     '<p class="list-hyphens">🔹 build a model to find the optimal location for store opening</p>',
@@ -13,7 +13,7 @@ module.exports = async () => [
     '<p class="list-hyphens">🔹 build look-alike models using ML-algorithms</p>',
     '<p class="list-hyphens">🔹 develop a system for monitoring data quality</p>',
     '<p class="list-hyphens">🔹 develop "silver" and "gold" data sources</p>',
-    '<p class="list-lamp-hyphens">💡 Study at the fifth course of <a href="https://kau.org.ua/" target="_blank">KAU</a>, "Computer Science" specialization.</p>',
+    '<p class="list-lamp-hyphens">💡 Study at the sixth course of <a href="https://kau.org.ua/" target="_blank">KAU</a>, "Computer Science" specialization.</p>',
     '<p class="list-lamp-hyphens">💡 Graduated with bachelor`s degree "Information System and Technologies" specialization, FICT, KPI.</p>',
     '<p class="list-lamp-hyphens">💡 Now, I`m developing my skills in MLOps and Data Engineering fields. It would help me to write efficient code and cover' +
     ' the full lifecycle of ML project. I want to apply these skills at my new job.</p>',
